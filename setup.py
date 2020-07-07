@@ -1,7 +1,7 @@
 from setuptools import setup
 
 
-REQUIRES = ['marshmallow>=2.0.0', 'numpy']
+REQUIRES = ['marshmallow', 'marshmallow-dataclass', 'numpy']
 
 with open('README.md', 'r') as f:
     readme = f.read()
