@@ -1,7 +1,7 @@
 from setuptools import setup
 
 
-REQUIRES = ['marshmallow>=2.0.0', 'numpy>=0.0.1']
+REQUIRES = ['marshmallow>=2.0.0', 'numpy']
 
 with open('README.md', 'r') as f:
     readme = f.read()
@@ -9,7 +9,7 @@ with open('README.md', 'r') as f:
 if __name__ == '__main__':
     setup(
         name='marshmallow-numpy',
-        version='1.0.0',
+        version='0.1.0',
         author='Shachak Zicher',
         author_email='shachakz12@gmail.com',
         description='Marshmallow numpy field',
