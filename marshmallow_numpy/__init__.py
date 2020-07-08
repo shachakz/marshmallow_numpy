@@ -16,11 +16,11 @@ class NumpyField(Field):
     ):
         super(NumpyField, self).__init__(*args, **kwargs)
 
-    def _serialize(self, value: np.array, *args, **kwargs):
+    def _serialize(self, value: np.ndarray, *args, **kwargs):
         if value is None:
             return None
 
-        return asdict(_NumpyArrayDTO(dtype=value.dtype, data=value.tolist()))
+        return asdict(_NumpyArrayDTO(dtype=value.dtype.name, data=value.tolist()))
 
     def _deserialize(self, value, *args, **kwargs):
         if value is None:
@@ -28,4 +28,4 @@ class NumpyField(Field):
 
         np_array_obj = _NumpyArrayDTO(**value)
 
-        return np.array(np_array_obj.data, dtype=np_array_obj.dtype)
+        return np.array(np_array_obj.data, dtype=np.dtype(np_array_obj.dtype))

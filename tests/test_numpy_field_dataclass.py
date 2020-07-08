@@ -22,7 +22,7 @@ def test_dataclass_serialize(schema: Schema):
     assert res == {'array': {'data': [[0.0, 0.0, 0.0],
                                       [0.0, 0.0, 0.0],
                                       [0.0, 0.0, 0.0]],
-                             'dtype': np.dtype('float64')
+                             'dtype': 'float64'
                              }
                    }
 
@@ -31,8 +31,9 @@ def test_dataclass_deserialize(schema: Schema):
     res: TestDTO = schema.load({'array': {'data': [[1.0, 1.0, 1.0],
                                                    [1.0, 1.0, 1.0],
                                                    [1.0, 1.0, 1.0]],
-                                          'dtype': np.dtype('float64')
+                                          'dtype': 'float64'
                                           }
                                 })
 
     assert res.array.tobytes() == np.ones((3, 3)).tobytes()
+    assert res.array.dtype == np.dtype('float64')
