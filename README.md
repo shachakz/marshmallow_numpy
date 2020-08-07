@@ -1,6 +1,6 @@
 # Marshmallow Numpy JSON serializer / deserializer
 ## Example:
-```
+```python
 import numpy as np
 import marshmallow_dataclass
 from marshmallow_numpy import NumpyArray
