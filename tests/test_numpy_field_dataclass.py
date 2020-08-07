@@ -1,16 +1,15 @@
-from dataclasses import dataclass, field, asdict
-
-import marshmallow_dataclass
-import numpy as np
 import pytest
+import numpy as np
 from marshmallow import Schema
+import marshmallow_dataclass
+from dataclasses import dataclass
 
-from marshmallow_numpy import NumpyField
+from marshmallow_numpy import NumpyArray
 
 
 @dataclass
 class TestDTO:
-    array: np.array = field(metadata={'marshmallow_field': NumpyField()})
+    array: NumpyArray
 
 @pytest.fixture
 def schema() -> Schema:

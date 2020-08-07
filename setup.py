@@ -9,7 +9,7 @@ with open('README.md', 'r') as f:
 if __name__ == '__main__':
     setup(
         name='marshmallow-numpy',
-        version='0.1.0',
+        version='0.3.0',
         author='Shachak Zicher',
         author_email='shachakz12@gmail.com',
         description='Marshmallow numpy field',
@@ -19,4 +19,5 @@ if __name__ == '__main__':
         license='MIT',
         packages=['marshmallow_numpy'],
         install_requires=REQUIRES,
+        url='https://github.com/shachakz/marshmallow_numpy'
     )
