@@ -1,5 +1,6 @@
 # Marshmallow Numpy JSON serializer / deserializer
-![Python package](https://github.com/shachakz/marshmallow_numpy/workflows/Python%20package/badge.svg?branch=master)
+![Test](https://github.com/shachakz/marshmallow_numpy/workflows/Test/badge.svg?branch=master)
+
 ## Example:
 ```python
 import numpy as np
